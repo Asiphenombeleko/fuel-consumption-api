@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .vehicle-info {
+            margin-top: 20px;
+        }
+
+        .vehicle-info div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/record" method="post">
+
+        <h1>Vehicle Information</h1>
+        <div class="vehicle-info" id="vehicleInfo">
+
+            {{#each status}} 
+            {{this.liters}}
+            {{/each}}
+            </div>
+    </form>
+
+</body>
+
+</html>

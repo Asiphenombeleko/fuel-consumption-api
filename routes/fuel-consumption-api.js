@@ -26,7 +26,7 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         const vehicles = await fuelConsumption.vehicles();
 
         // Respond with a JSON object containing the status and data
-        res.render("index", {
+        res.render("listcars", {
             vehicles
         });
     }
@@ -42,8 +42,8 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         const vehicle = await fuelConsumption.vehicle(id);
 
         // Respond with a JSON object containing the status and data
-        res.json({
-            status: "success",
+        res.render("record",{
+           
             data: vehicle
         });
     }
@@ -60,7 +60,9 @@ export default function FuelConsumptionAPI(fuelConsumption) {
         const status = await fuelConsumption.refuel(vehicleId, liters, amount, distance, filledUp);
 
         // Respond with a JSON object containing the refuel status
-        res.json(status);
+        res.render("record",{
+            status
+        });
     }
 
     // Return an object containing the functions to be used as API endpoints

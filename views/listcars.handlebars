@@ -1,0 +1,50 @@
+<body>
+
+    <form action="/allcars" method="post">
+        <h1>All Cars</h1>
+
+        <table>
+            
+            <thead>
+                <tr>
+                   
+                    <th>ID</th>
+                    <th>Description </th>
+                    <th>Registration</th>
+                    <th>Total liters</th>
+                    <th>Total Amount</th>
+                    <th>Total Distance</th>
+                    <th>Fuel Consumption</th>
+                    
+                </tr>
+
+            </thead>
+
+            <tbody>
+                {{#each vehicles}}
+
+                <tr>
+                    <td>
+                        {{this.id}}
+                    </td>
+                    <td>
+                       {{this.description}} 
+                    </td>
+                    <td>
+                        {{this.reg_number}}
+                    </td>
+                    <td>
+                        {{this.total_liters}}
+                    </td>
+                    <td>{{this.total_amount}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+          
+        </table>
+    </form>
+</body>

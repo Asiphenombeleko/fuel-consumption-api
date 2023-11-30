@@ -114,8 +114,13 @@ describe("The FuelConsumption API", function () {
     const fuelConsumption = FuelConsumption(db);
 
     // Get the initial list of vehicles and assert that it's empty
+    await fuelConsumption.addVehicle({
+      regNumber: "CA 222-999",
+      description: "White VW Polo",
+    });
     let vehicles = await fuelConsumption.vehicles();
-    assert.equal(0, vehicles.length);
+    console.log(vehicles.length);
+    assert.equal(1, vehicles.length);
 
     // Add three vehicles
     await fuelConsumption.addVehicle({
@@ -135,7 +140,7 @@ describe("The FuelConsumption API", function () {
 
     // Get the updated list of vehicles and assert that it contains three vehicles
     vehicles = await fuelConsumption.vehicles();
-    assert.equal(3, vehicles.length);
+    assert.equal(4, vehicles.length);
   });
 
   // Test Case: Add fuel for a vehicle
