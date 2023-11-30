@@ -172,6 +172,7 @@ describe("The FuelConsumption API", function () {
   it("should be able to add fuel for another vehicle", async function () {
     // create instance for the function fuelConsumption
     const fuelConsumption = FuelConsumption(db);
+
     // Add another vehicle
     const status = await fuelConsumption.addVehicle({
       regNumber: "CF 354-117",
