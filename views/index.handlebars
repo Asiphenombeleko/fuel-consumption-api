@@ -1,0 +1,33 @@
+<body>
+    <h1>Fuel Consumption App</h1>
+
+    <!-- Form to add a new vehicle -->
+    <form action="/" method="post">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <br>
+        <label for="regNumber">Registration Number:</label>
+        <input type="text" id="regNumber" name="regNumber" required>
+        <br>
+        <button type="submit">Add Vehicle</button>
+    </form>
+
+    <!-- Table to display the list of vehicles -->
+    <table id="vehiclesTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Registration Number</th>
+                <th>Total liters</th>
+                <th>Total Amount</th>
+                <th>Total distance</th>
+                <th>Fuel Consumption</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Vehicle data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+</body>
