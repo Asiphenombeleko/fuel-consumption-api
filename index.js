@@ -59,10 +59,9 @@ app.get("/", fuelConsumptionAPI.addVehicle);
 app.get("/addvehicle", fuelConsumptionAPI.addVehicle);
 app.post("/addvehicle", fuelConsumptionAPI.addVehicle);
 app.get("/record", fuelConsumptionAPI.refuel);
+app.post("/record", fuelConsumptionAPI.refuel);
 app.post("/allcars", fuelConsumptionAPI.vehicles);
 app.get("/allcars", fuelConsumptionAPI.vehicles);
-// app.post('/api/vehicle', fuelConsumptionAPI.addVehicle);
-app.get("/record", fuelConsumptionAPI.refuel);
-// app.post('/api/refuel', fuelConsumptionAPI.refuel);
+
 
 app.listen(PORT, () => console.log(`App started on port: ${PORT}`));

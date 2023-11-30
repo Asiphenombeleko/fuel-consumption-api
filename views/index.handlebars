@@ -1,35 +1,31 @@
 <body>
-    <h1>Fuel Consumption App</h1>
+  
 
     <!-- Form to add a new vehicle -->
     <form action="/addvehicle" method="post">
+        <h2>Add Vehicle</h2>
         <label for="description">Description:</label>
         <input type="text" id="description" name="description" required>
-        <br>
+
         <label for="regNumber">Registration Number:</label>
         <input type="text" id="regNumber" name="regNumber" required>
-        <br>
+
+        <label for="totalLiters">Total Liters:</label>
+        <input type="number" id="totalLiters" name="totalLiters" required>
+
+        <label for="totalAmount">Total Amount:</label>
+        <input type="number" id="totalAmount" name="totalAmount" required>
+
+        <label for="totalDistance">Total Distance:</label>
+        <input type="number" id="totalDistance" name="totalDistance" required>
+
+        <label for="fuelConsumption">Fuel Consumption:</label>
+        <input type="number" id="fuelConsumption" name="fuelConsumption">
+
         <button type="submit">Add Vehicle</button>
     </form>
-
-    <!-- Table to display the list of vehicles -->
-    <table id="vehiclesTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Description</th>
-                <th>Registration Number</th>
-                <th>Total liters</th>
-                <th>Total Amount</th>
-                <th>Total distance</th>
-                <th>Fuel Consumption</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each result}}
-           {{this.destance}}
-            {{/each}}
-        </tbody>
-    </table>
+ <form action="/allcars" method="get">
+    <button type="submit">View all cars</button></form>
+    
 
 </body>
